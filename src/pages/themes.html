@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Themes</title>
+    <style>
+      * {
+        transition: all 0.2s linear;
+        margin: 0;
+        padding: 0;
+        font-family: Ubuntu, Arial, sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        background: linear-gradient(-90deg, #080e0d, #0d1a17);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input[type="radio"] {
+        margin: 10px 0;
+        cursor: pointer;
+      }
+
+      label {
+        color: white;
+        cursor: pointer;
+      }
+
+      input[name="theme"]:checked ~ label {
+        color: springgreen;
+      }
+      
+      .button {
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .active {
+        color: springgreen;
+      }
+
+      .dark {
+        background: linear-gradient(-90deg, #080e0d, #0d1a17);
+      }
+
+      .light {
+        background: linear-gradient(-70deg, #5c4e96, #4085a5);
+      }
+
+      .back {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        color: black;
+        padding: 5px 10px;
+        background: white;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 1px 1px 6px rgb(143, 72, 62);
+      }
+
+      .back:hover {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <a href="./help.html" class="back">GO BACK</a>
+    <div class="buttons">
+      <div class="button">
+        <input type="radio" name="theme" checked id="input_dark" class="btn dark" />
+        <label for="input_dark">Dark</label>
+      </div>
+      <div class="button">
+        <input type="radio" name="theme" id="input_light" class="btn light" />
+        <label for="input_light">Light</label>
+      </div>
+    </div>
+    <script>
+      const q = (e) => document.querySelector(e);
+      const qa = (e) => document.querySelectorAll(e);
+
+      function change(class_name) {
+        q('body').classList.remove(q('body').getAttribute('class'))
+        q('body').classList.add(class_name)
+      }
+
+      qa('.btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          change(e.target.getAttribute('class').split(' ')[1]);
+        })
+      })
+    </script>
+  </body>
+</html>

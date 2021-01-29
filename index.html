@@ -1,0 +1,68 @@
+<!DOCTYPE html/>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>SEARCH | By Marcos Vinicius</title>
+    <style>
+      .help {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./src/pages/help.html" class="help">Help</a>
+    <header class="header-top">
+      <h1 draggable="true">Search in google</h1>
+    </header>
+    <div class="box-search">
+      <input
+        type="search"
+        spellcheck="false"
+        autofocus
+        id="input"
+        class="input-search"
+        minlength="1"
+      />
+    </div>
+    <footer class="box-footer">
+      <a
+        href="https://www.instagram.com/marcos.dev.web/"
+        target="_blank"
+        rel="external"
+        >Instagram</a
+      >
+      <span class="pipe">|</span>
+      <a
+        href="https://www.youtube.com/channel/UCjOhmXXEFCV8jQueSwmiZjQ"
+        target="_blank"
+        rel="external"
+        >YouTube</a
+      >
+      <span class="pipe">|</span>
+      <a
+        href="https://github.com/marcos-dev-web/"
+        target="_blank"
+        rel="external"
+        >Git Hub</a
+      >
+    </footer>
+    <script>
+      document.getElementById("input").addEventListener("invalid", (e) => {
+        e.preventDefault();
+      });
+    </script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/focus.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./src/themes/Themes.js"></script>
+    <script src="./js/applyTheme.js"></script>
+    <script src="./js/animate_required.js"></script>
+  </body>
+</html>
