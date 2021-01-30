@@ -26,7 +26,7 @@ window.addEventListener("keydown", (e) => {
     let searchValue = element.value;
     if (verifySearch(searchValue)) {
       if (searchValue.length >= 1) {
-        window.location.href = `https://google.com/?q=${searchValue}`; //SEARCH IN GOOLGE WITH THIS URL
+        window.location.href = `https://www.google.com/search?source=hp&ei=7cQVYO-II-TB5OUPm_GM8Ac&q=${searchValue}&oq=${searchValue}`; //SEARCH IN GOOLGE WITH THIS URL
       }
     }
   }

@@ -28,6 +28,9 @@ header.header-top h1 {
   background: transparent;
   outline: none;
   border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .box-footer {
